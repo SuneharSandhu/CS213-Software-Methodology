@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Ayush Joshi and Anil Tilve -->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PhotoSearchController">
+   <top>
+      <AnchorPane prefHeight="240.0" prefWidth="503.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleSearchPhotos" text="Search" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="0.0" />
+            <Button layoutX="273.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleAddTag" text="Add Tag" AnchorPane.leftAnchor="273.0" AnchorPane.topAnchor="40.0" />
+            <Button fx:id="LogoutButton" mnemonicParsing="false" onAction="#handleLogoutButton" text="Log out" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Separator AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-12.0" AnchorPane.rightAnchor="-12.0" />
+            <Button mnemonicParsing="false" onAction="#handleBackToAlbumsButton" text="Back" />
+            <DatePicker fx:id="fromDate" layoutX="-1.0" layoutY="203.0" prefHeight="25.0" prefWidth="100.0" promptText="From" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="-1.0" />
+            <DatePicker fx:id="toDate" layoutX="108.0" layoutY="203.0" prefHeight="25.0" prefWidth="100.0" promptText="To" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="108.0" />
+            <ListView fx:id="tags" prefWidth="426.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
+            <Button layoutX="344.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleRemoveTag" text="Remove Tag" />
+            <Text layoutX="153.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Photos">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <ChoiceBox fx:id = "tagTypeChoiceBox" layoutX="-1.0" layoutY="41.0" prefHeight="25.0" prefWidth="128.0" />
+            <ChoiceBox fx:id = "tagValueChoiceBox" layoutX="139.0" layoutY="40.0" prefHeight="25.0" prefWidth="123.0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets left="12.0" right="12.0" top="12.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </top>
+   <center>
+      <ListView fx:id="photoListView" prefHeight="335.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </ListView>
+   </center>
+   <bottom>
+      <Button fx:id="createAlbumBtn" mnemonicParsing="false" onAction="#handleCreateAlbumFromResults" text="Create Album from Results" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
