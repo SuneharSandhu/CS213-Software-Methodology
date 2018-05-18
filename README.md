@@ -4,7 +4,7 @@ These projects were completed in collaboration with Ayush Joshi.
 
 ## Song Library
 
-A song library program written in Java.
+A song library program written in Java FX.
 
 ## Chess
 
@@ -12,7 +12,7 @@ A chess game written in Java.
 
 ## Photos
 
-A photo album program written in Java.
+A photo album program written in Java FX.
 
 ## Photo App
 
